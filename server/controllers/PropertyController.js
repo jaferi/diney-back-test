@@ -87,8 +87,8 @@ exports.updateProperty = (req, res) => {
         return res.status(400).json({ message: error });
     }
 
-    if (title) property.userId = title;
-    if (price) property.userId = price;
+    if (title) property.title = title;
+    if (price) property.price = price;
     if (userId) property.userId = userId;
     if (userName) property.userName = userName;
     if (address) property.address = address;
