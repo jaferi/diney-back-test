@@ -53,7 +53,7 @@ exports.getAllProperties = (req, res) => {
     }
 
     // slice by pagination
-    filtered = filtered.splice(offset, offset + limit)
+    // filtered = filtered.splice(offset, offset + limit)
 
     res.json(filtered);
 };
@@ -79,7 +79,7 @@ exports.updateProperty = (req, res) => {
         return res.status(404).json({message: "Property not found"});
     }
 
-    const {userId, userName, address, note, title, price} = req.body;
+    const {userId, userName, address, note, title, price} = {...property, ...req.body};
 
     // Validate required fields
     const error = validation({ title, address, price });

@@ -14,6 +14,7 @@ async function testAPIs() {
         });
         console.log('Create:', res.data);
 
+
         const propertyId = res.data.id;
 
         // 2. Get all properties
