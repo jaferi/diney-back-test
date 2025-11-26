@@ -13,6 +13,7 @@ const userRoutes = require("./routes/users");
 const marketRoutes = require("./routes/markets");
 const tradingRoutes = require("./routes/trading");
 const walletRoutes = require("./routes/wallet");
+const propertiesRoutes = require("./routes/properties");
 
 // Load environment variables
 dotenv.config();
@@ -60,6 +61,7 @@ app.use("/api/users", userRoutes);
 app.use("/api/markets", marketRoutes);
 app.use("/api/trading", tradingRoutes);
 app.use("/api/wallet", walletRoutes);
+app.use("/api", propertiesRoutes);
 
 // Health check endpoint
 app.get("/api/health", (req, res) => {
