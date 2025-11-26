@@ -53,7 +53,7 @@ exports.getAllProperties = (req, res) => {
     }
 
     // slice by pagination
-    // filtered = filtered.splice(offset, offset + limit)
+    filtered = filtered.splice(offset, offset + limit)
 
     res.json(filtered);
 };

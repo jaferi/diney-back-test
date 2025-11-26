@@ -15,30 +15,30 @@ async function testAPIs() {
         console.log('Create:', res.data);
 
 
-        const propertyId = res.data.id;
-
-        // 2. Get all properties
-        res = await axios.get(BASE_URL);
-        console.log('All properties:', res.data);
-
-        // 3. Update property
-        res = await axios.put(`${BASE_URL}/${propertyId}`, {
-            title: 'Updated House',
-            price: 150000
-        });
-        console.log('Update:', res.data);
-
-        // 4. Get by ID
-        res = await axios.get(`${BASE_URL}/${propertyId}`);
-        console.log('Get by ID:', res.data);
-
-        // 5. Delete property
-        res = await axios.delete(`${BASE_URL}/${propertyId}`);
-        console.log('Delete:', res.data);
-
-        // 6. Get all properties after deletion
-        res = await axios.get(BASE_URL);
-        console.log('All properties after deletion:', res.data);
+        // const propertyId = res.data.id;
+        //
+        // // 2. Get all properties
+        // res = await axios.get(BASE_URL);
+        // console.log('All properties:', res.data);
+        //
+        // // 3. Update property
+        // res = await axios.put(`${BASE_URL}/${propertyId}`, {
+        //     title: 'Updated House',
+        //     price: 150000
+        // });
+        // console.log('Update:', res.data);
+        //
+        // // 4. Get by ID
+        // res = await axios.get(`${BASE_URL}/${propertyId}`);
+        // console.log('Get by ID:', res.data);
+        //
+        // // 5. Delete property
+        // res = await axios.delete(`${BASE_URL}/${propertyId}`);
+        // console.log('Delete:', res.data);
+        //
+        // // 6. Get all properties after deletion
+        // res = await axios.get(BASE_URL);
+        // console.log('All properties after deletion:', res.data);
 
     } catch (err) {
         if (err.response) {
